@@ -1271,13 +1271,13 @@ more complicated problem.</p>
 
 <p>Suppose a farmer has 75 acres on which to plant two crops: wheat and barley.
 To produce these crops, it costs the farmer (for seed, fertilizer, etc.) $120 per acre for the
-wheat and  $210 per acre for the barley. The farmer has $15000 available for expenses.
+wheat andÂ  $210 per acre for the barley.Â The farmer has $15000 available for expenses.
 But after the harvest, the farmer must store the crops while awaiting favourable market conditions.
-The farmer has storage space for 4000 bushels. Each acre yields an average of 110 bushels of wheat
-or 30 bushels of barley.  If the net profit per bushel of wheat (after all expenses have been subtracted)
+The farmer has storage space for 4000 bushels.Â Each acre yields an average of 110 bushels of wheat
+or 30 bushels of barley.Â  If the net profit per bushel of wheat (after all expenses have been subtracted)
 is $1.30 and for barley is $2.00, how should the farmer plant the 75 acres to maximize profit?</p>
 
-<p>We begin by formulating the problem mathematically. 
+<p>We begin by formulating the problem mathematically.Â 
 First we express the objective, that is the profit, and the constraints
 algebraically, then we graph them, and lastly we arrive at the solution
 by graphical inspection and a minor arithmetic calculation.</p>
@@ -1299,7 +1299,7 @@ x + y &lt;= 75
 <p>Strictly speaking there are two more constraint inequalities forced by the fact that the farmer cannot plant
 a negative number of acres, namely:</p>
 
-<p align="center">x &gt;= 0, y &gt;= 0.</p>
+<p align="center">x &gt;= 0,Â y &gt;= 0.</p>
 
 <p>Next we graph the regions specified by the constraints. The last two say that we only need to consider
 the first quadrant in the x-y plane. Here's a graph delineating the triangular region in the first quadrant determined
@@ -1450,7 +1450,7 @@ The value of the objective function is retrieved via the API call 'get_objective
 are retrieved via the API call 'get_variables'. At last, the model is removed from memory via a call to 'delete_lp'.
 Don't forget this to free all memory allocated by lp_solve.</p>
 
-<p>The solution is the same answer we obtained before. 
+<p>The solution is the same answer we obtained before.Â 
 Note that the non-negativity constraints are accounted implicitly because variables are by default non-negative
 in lp_solve.</p>
 
@@ -1472,7 +1472,7 @@ of 3 dimensions, but beyond that it is all very theoretical.</p>
 
 <p>If we denote the number of acres allotted to corn by z, then the objective function becomes:</p>
 
-<p align="center">P = (110)(1.30)x + (30)(2.00)y + (125)(1.56) = 143x + 60y + 195z</p>
+<p align="center">P = (110)(1.30)x + (30)(2.00)yÂ + (125)(1.56) = 143x + 60y + 195z</p>
 
 <p>And the constraint inequalities are:</p>
 
@@ -1480,7 +1480,7 @@ of 3 dimensions, but beyond that it is all very theoretical.</p>
 120x + 210y + 150.75z &lt;= 15000<br>
 110x + 30y + 125z &lt;= 4000<br>
 x + y + z &lt;= 75<br>
-x &gt;= 0, y &gt;= 0, z &gt;= 0
+x &gt;= 0,Â y &gt;= 0, z &gt;= 0
 </p>
 
 <p>The problem is solved with lp_solve as follows:</p>
@@ -1522,16 +1522,16 @@ Array
 <p>So the farmer should ditch the wheat and plant 56.5789 acres of barley and 18.4211 acres of corn.</p>
 
 <p>There is no practical limit on the number of variables and constraints that PHP can handle.
-Certainly none that the relatively unsophisticated user will encounter. Indeed, in
+Certainly none that the relatively unsophisticated user will encounter.Â Indeed, in
 many true applications of the technique of linear programming, one needs
-to deal with many variables and constraints. The solution of such
+to deal with many variables and constraints.Â The solution of such
 a problem by hand is not feasible, and software like PHP is crucial
-to success. For example, in the farming problem with which we
+to success.Â For example, in the farming problem with which we
 have been working, one could have more crops than two or three. Think
-agribusiness instead of family farmer. And one could have constraints
+agribusiness instead of family farmer.Â And one could have constraints
 that arise from other things beside expenses, storage and acreage limitations. For example:</p>
 <ul>
-  <li>Availability of seed. This might lead to constraint inequalities like xj &lt; k.</li>
+  <li>Availability of seed.Â This might lead to constraint inequalities like xj &lt; k.</li>
   <li>Personal preferences. Thus the farmer's spouse might have a preference
   for one variety over another and insist on a corresponding planting,
   or something similar with a collection of crops; thus constraint inequalities
@@ -1541,7 +1541,7 @@ that arise from other things beside expenses, storage and acreage limitations. F
 </ul>
 
 <p>Below is a sequence of commands that solves exactly such a problem.
-You should be able to recognize the objective expression and the constraints from the data that is entered. 
+You should be able to recognize the objective expression and the constraints from the data that is entered.Â 
 But as an aid, you might answer the following questions:
 </p>
 
@@ -1599,7 +1599,7 @@ Also note that Infinity is used for variables that have no upper limit.
 </p>
 
 <p>Note that despite the complexity of the problem, lp_solve solves it almost instantaneously. It seems the
-farmer should bet the farm on crop number 6. We strongly suggest
+farmer should bet the farm on crop number 6.Â We strongly suggest
 you alter the expense and/or the storage limit in the problem and see
 what effect that has on the answer.</p>
 
